@@ -24,18 +24,18 @@ def extract_text_from_pdf(pdf_path):
     fake_file_handle.close()
 
     if text:
-        contor = 0
+
         file = open("Paragrafe.txt", "w", encoding='utf-8')
         a=text.split("  ")
 
         for paragraph in a :
-            print(paragraph)
             b=paragraph.split()
             if(b.count("pe")>=2):
+                print(paragraph)
                 print(b.count('pe'))
             if(b.count("pe")==2):
                  file.write(paragraph)
-                 contor += 1
+
 
 
     return text
